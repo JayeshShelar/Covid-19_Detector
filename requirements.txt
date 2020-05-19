@@ -12,4 +12,4 @@ Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.2
 numpy==1.18.4
 pandas==0.24.2
-requests==0.11.1
+requests==2.20.0
