@@ -3,7 +3,7 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 from flask import Flask, redirect, url_for, request, render_template
 import os
-#from werkzeug import secure_filename
+
 app = Flask(__name__)
 
 
@@ -26,7 +26,7 @@ def success(name):
     x = np.expand_dims(x, axis=0)
 
     images = np.vstack([x])
-    classes = model.predict_classes(images, batch_size=10)
+    classes = model.predict(images, batch_size=10)
 
     if classes[0][0] == 1:
 
